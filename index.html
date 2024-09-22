@@ -7,22 +7,29 @@
     <title>Temperature Converter</title>
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <h1>Temperature Converter</h1>
-        <input type="number" id="inputValue" placeholder="Enter temperature" />
+        <label for="inputValue">Enter temperature:</label>
+        <input type="number" id="inputValue" placeholder="Enter temperature" required />
+        
+        <label for="inputUnit">From:</label>
         <select id="inputUnit">
             <option value="C">Celsius</option>
             <option value="F">Fahrenheit</option>
             <option value="K">Kelvin</option>
         </select>
-        <button onclick="convertTemperature()">Convert</button>
-        <h2>Result: <span id="result"></span></h2>
+        
+        <label for="outputUnit">To:</label>
         <select id="outputUnit">
             <option value="C">Celsius</option>
             <option value="F">Fahrenheit</option>
             <option value="K">Kelvin</option>
         </select>
-    </div>
+        
+        <button onclick="convertTemperature()">Convert</button>
+        
+        <h2>Result: <span id="result">N/A</span></h2>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
