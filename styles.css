@@ -1,22 +1,59 @@
+/* Body styling */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    font-family: 'Poppins', sans-serif; /* Use Google Fonts for modern feel */
     margin: 0;
 }
 
+/* Container styling */
 .container {
     text-align: center;
     background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out; /* Animation for hover */
 }
 
+.container:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+}
+
+/* Input, select, and button styling */
 input, select, button {
-    margin: 5px;
-    padding: 10px;
-    font-size: 16px;
+    margin: 10px;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Button specific styling */
+button {
+    background-color: #6a5acd; /* Soft purple */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #483D8B; /* Darker purple on hover */
+}
+
+/* Add some space between elements */
+input, select, button {
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
 }
